@@ -8,7 +8,7 @@ from pages.inventory_page import InventoryPage
 from pages.login_page import LoginPage
 
 
-def test_checkout_order(browser):
+def test_create_order(browser):
     page = browser.new_page()
     login_page = LoginPage(page)
     inventory_page = InventoryPage(page)
@@ -23,7 +23,7 @@ def test_checkout_order(browser):
     finish_page.logout()
 
 
-def test_checkout_without_order(browser):
+def test_create_order_without_items(browser):
     page = browser.new_page()
     login_page = LoginPage(page)
     inventory_page = InventoryPage(page)
@@ -38,7 +38,7 @@ def test_checkout_without_order(browser):
     finish_page.logout()
 
 
-def test_create_order_on_the_page_of_order(browser):
+def test_create_order_inside_the_page_order(browser):
     page = browser.new_page()
     login_page = LoginPage(page)
     inventory_page = InventoryPage(page)
